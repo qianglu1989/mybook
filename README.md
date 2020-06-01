@@ -17,6 +17,13 @@
 ## MYSQL
 [MySQL技术内幕(InnoDB存储引擎)第2版](MYSQL)
 
+## Kafka
+[Apache Kafka](Kafka)
+
+## ActiveMQ
+[ActiveMQ-in-active](ActiveMQ)
+
+
 ## 软考
 [系统架构设计师教程（第4版](软考)
 
