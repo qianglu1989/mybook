@@ -1,0 +1,242 @@
+﻿百度（3轮技术面）：
+	
+1.synchrnoized和reentrantlock的底层实现及重入的底层原理
+		monitorenter monitorexit AQS。 重入原理：entry count，state
+	
+2.锁的四种状态及升级过程
+	
+3.CMS和G1的异同
+	
+4.G1什么时候引发Full GC
+	
+5.除了CAS，原子类，syn，Lock还有什么线程安全的方式
+		final
+	
+6.HashMap和Hashtable的异同
+	
+7.允许null键的map你知道哪些
+		HashMap，LinkedHashMap，WeakHashMap
+	
+8.null键放在HashMap的哪里
+		底层数组的0号位置
+	
+9.为什么hashtable的扩容是2倍+1
+		从除留余数法，hashtable初始容量方面回答
+	
+10.红黑树的插入时间复杂度
+	
+11.解决哈希冲突的方式
+	
+12.现有1T的数据，内存只有1G，该怎么对他们排序
+		外部排序（多路归并）
+	
+13.Tomcat为什么要重写类加载器
+	
+14.tcp握手挥手过程及其状态转换
+	
+15.mysql隔离级别
+	
+16.B树和B+树的区别
+	
+17.你知道哪些设计模式，它们在JDK源码中是怎么体现的
+	
+18.Java运行时数据区
+	
+19.说一个最熟悉的垃圾回收算法
+	
+20.吞吐量优先和响应时间优先的回收器是哪些
+		parallel scavenge和CMS
+	
+21.类加载全过程
+	
+22.线程池7个参数
+	
+23.CAS的ABA问题怎么解决
+		AtomicStampedReference，还可用带boolean版本戳的AtomicMarkableReference
+	
+24.Java内存模型
+		JMM共享内存模型以及8个原子操作指令
+	
+25.什么叫做阻塞队列的有界和无界
+	
+26.cookie和session介绍一下
+	
+27.说一下反射，反射会影响性能吗
+	
+28.谈一下AQS吧
+	
+29.为什么你说AQS的底层是CAS+volatile
+		state是volatile修饰的，并且设置state的方法除了有setState，还有compareAndSetState
+	
+30.JUC包里的同步组件主要实现了AQS的哪些主要方法
+		tryAcquire, tryRelease, tryAcquireShared, tryReleaseShared, isHeldExclusively
+
+	coding：leetcode+剑指offer原题共5题
+
+
+
+美团（3轮技术面）：
+	
+1.ConcurrentHashMap底层原理
+	
+2.手写一个LRU
+		用LinkedHashMap
+	
+3.HashMap底层数据结构
+	
+4.为什么用红黑树不用普通的AVL树
+	
+5.为什么在8的时候链表变成树
+	
+6.为什么在6的时候从树退回链表
+	
+7.线程池7个参数，该怎么配置最好
+	
+8.说一下volatile
+	
+9.volatile的可见性和禁止指令重排序怎么实现的
+		可见性：缓存一致性协议
+		禁止指令重排序：JMM模型里有8个指令完成数据的读写，通过其中load和store指令相互组合成的4个内存屏障实现禁止指令重排序
+	
+10.CAS是什么
+	
+11.PriorityQueue底层是什么，初始容量是多少，扩容方式呢
+		最小堆，
+11，若原始大小<64，则扩容为原来的2倍+2，不然就扩容为原来的1.5倍
+	
+12.HashMap的容量为什么要设置为2的次幂
+	
+13.你知道跳表吗，什么场景会用到
+		ConcurrentSkipListMap，用在多线程下需要自定义排序顺序时
+	
+14.CopyOnWriteArrayList知道吗，迭代器支持fail-fast吗
+		线程安全ArrayList，写时复制，迭代器是采用快照风格，不支持fail-fast
+	
+15.innodb的底层数据结构
+	
+16.为什么用B+树不用B树
+	
+17.为什么用B+树不用红黑树
+	
+18.coding：无序数组怎么寻找第k大的数，写一个二叉树层次遍历
+	
+19.不知道大小的数据流取其中100个数，怎样的取法能最随机
+	
+20.n个物品每个物品都有一定价值，分给2个人，怎么分两个人的价值差最小
+	
+21.假设百度每个页面能放100个网页，每个页面都有一个评分，怎样快速找到第8页的所有网页
+
+
+
+顺丰（2轮技术面）：
+	
+1.线程池的设计里体现了什么设计模式
+	
+2.说说你了解什么设计模式，知道责任链设计模式吗
+	
+3.wait/notify体现了什么设计模式
+	
+4.线程池7个参数
+	
+5.谈一下spring事务传播
+	
+6.谈一下IOC底层原理
+	
+7.怎么判断内存泄漏
+	
+8.怎么在日志里排查错误，该用哪些Linux命令
+	
+9.mysql原子性和持久性怎么保证
+		undolog，redolog
+	
+10.怎么解决幻读
+		MVCC+间隙锁
+	
+11.innodb和myisam区别
+	
+12.索引分类
+	
+13.对象的创建过程
+	
+14.对象在内存中的存储布局
+		对象头，类元指针，实例数据，对齐填充
+	
+15.对象头具体包括什么
+	
+16.对象怎么定位
+		直接指针，句柄
+	
+17.堆的划分
+	
+18.对象怎么分配
+		栈上分配->TLAB->老年代->新生代
+	
+19.具体讲一下CMS流程
+	
+20.锁的四种状态
+	
+21.Object obj = new Object()这句话在内存里占用了多少内存
+		引用变量4Byte，Object对象的对象头12Byte，由于对齐填充增值16Byte，共20Byte
+	
+22.synchronized和reentrantLock的异同
+
+
+
+京东（2轮技术面）：
+	
+	
+1.总体说一下集合框架
+	
+2.你怎么看待接口和抽象类
+	
+3.索引的分类
+	
+4.主键索引的设计应该采用B-tree索引还是hash索引
+	
+5.设计模式说5，6个
+	
+6.谈一谈DDD面向领域编程
+	
+7.说一下hibernate一级缓存和二级缓存
+	
+8.说一下你了解的MQ
+ 	
+9.谈一谈你对高并发的理解，你会从什么角度设计高并发程序
+	
+10.JUC包里的限流该怎么做到
+		Semaphore / guava ratelimiter	
+	
+11.索引不适用的条件
+	
+12.说一下NIO和AIO
+	
+13.AIO里用到什么设计模式
+		观察者
+	
+14.说一下select，poll，epoll
+	
+15.谈一下TCP的拥塞控制
+	
+16.你知道什么是as-if-serial语义吗，它和happen-before语义有什么区别
+		本质没啥区别，前者是谈的单线程程序，后者谈的多线程程序
+	
+17.Executors创建线程池的方式
+	
+18.CachedThreadPool里面用的什么阻塞队列
+		SynchronousQueue
+	
+19.那你知道LinkedTransferQueue吗，和SynchronousQueue有什么区别
+	
+20.你还知道什么阻塞队列，能具体说说它们的特点吗
+		ArrayBlockingQueue，LinkedBlockingQueue，LinkedBlockingDeque，PriorityBlockingQueue，DelayQueue
+	
+21.线程池的线程数怎么设置比较好
+	
+22.你知道新出的LongAdder吗，和AtomicLong有什么区别
+		AtomicLong相当于多线程竞争一次修改value的机会
+		LongAdder把value拆成多个值放在cell数组里，相当于多线程竞争多次修改value的机会，性能自然上升
+	
+23.那你知道LongAccumulator吗
+		不仅支持加法，还支持自定义的其他操作
+阿里（7轮技术面）：
+	...
