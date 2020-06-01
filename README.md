@@ -6,28 +6,28 @@
 [Java8实战](基础/Java8实战.pdf)
 
 ## 问题分析
-[Java问题定位技术](问题分析)
+[Java问题定位技术](问题分析/Java问题定位技术.pdf)
 
-[memoryanalyzer](问题分析)
+[memoryanalyzer](问题分析/memoryanalyzer.pdf)
 
 ## Netty
-[Netty权威指南 第2版](Netty)
+[Netty权威指南 第2版](Netty/Netty权威指南%20第2版.pdf)
 
 ## Spring
-[Spring技术内幕：深入解析Spring架构与设计原理(第2版)](Spring)
+[Spring技术内幕：深入解析Spring架构与设计原理(第2版)](Spring/Spring技术内幕：深入解析Spring架构与设计原理(第2版)%20.pdf)
 
 ## MYSQL
-[MySQL技术内幕(InnoDB存储引擎)第2版](MYSQL)
+[MySQL技术内幕(InnoDB存储引擎)第2版](MYSQL/MySQL技术内幕(InnoDB存储引擎)第2版.pdf)
 
 ## Kafka
-[Apache Kafka](Kafka)
+[Apache Kafka](Kafka/Apache%20Kafka.pdf)
 
 ## ActiveMQ
-[ActiveMQ-in-active](ActiveMQ)
+[ActiveMQ-in-active](ActiveMQ/ActiveMQ-in-active.pdf)
 
 
 ## 软考
-[系统架构设计师教程（第4版](软考)
+[系统架构设计师教程（第4版](软考/系统架构设计师教程（第4版）.pdf)
 
 
 
